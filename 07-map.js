@@ -8,3 +8,17 @@ const user = [
     {name:'Kusan',age:22},
     {name:'Lasan',age:29}
 ]
+
+const accessList = user.map((item)=>{
+    const newItem = {...item}
+    if (item.age >= 25 ){
+        newItem.acces = 'kiret'
+    } else {
+        newItem.acces = 'kirbeit'
+    }
+    return newItem
+})
+
+console.log(accessList)
+
+
