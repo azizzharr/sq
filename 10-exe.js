@@ -10,6 +10,8 @@ const users = [
     {id: 8, name: 'Lasan', age: 29}
 ]
 
+
+
 const carts = [
     {user: 1, product: 1},
     {user: 1, product: 2},
@@ -47,23 +49,14 @@ const rl = readline.createInterface({
 
 
 
-rl.question("What is your name ? ", function(name) {
+rl.question("sub string ", function(sub) {
+    rl.question("string ", function(str) {
 
-    const user = users.find((item)=>{
-        return item.name === name
-    })
 
-    const cart = carts.filter((item)=>{
-        return item.user === user.id
-    })
 
-    user.products = cart.map((item) => {
-        return products.find((productItem) => {
-            return productItem.id === item.product
-        })
-    })
-    console.log(user)
 
+
+        
     rl.close();
 });
 
